@@ -37,7 +37,7 @@ export class VistaProductosComponent implements OnInit{
 
   obtenerProductos() {
     // Asumiendo que quieres obtener el cliente con ID 1
-    const ClienteId = 22; // O el ID que necesites
+    const ClienteId = 2; // O el ID que necesites
 
     this.ProductosService.getProductosById(ClienteId)
       .subscribe({

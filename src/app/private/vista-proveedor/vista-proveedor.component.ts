@@ -38,7 +38,7 @@ export class VistaProveedorComponent {
 
   obtenerProveedores() {
 
-    const ClienteId = 22; //El ID que necesites.
+    const ClienteId = 2; //El ID que necesites.
 
     this.proveedoresService.getProvedoresByID(ClienteId)
       .subscribe({

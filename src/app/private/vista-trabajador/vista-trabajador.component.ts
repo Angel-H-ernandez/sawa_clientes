@@ -38,7 +38,7 @@ export class VistaTrabajadorComponent {
 
   obtenerTrabajadores() {
 
-    const ClienteId = 22; //El ID que necesites.
+    const ClienteId = 2; //El ID que necesites.
 
     this.trabajadorService.getTrabajadoresById(ClienteId)
       .subscribe({

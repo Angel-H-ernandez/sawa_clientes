@@ -31,7 +31,7 @@ export class Ruta2Component implements OnInit{
 
   obtenerAreas() {
     // Asumiendo que quieres obtener el cliente con ID 1
-    const clienteId = 22; // O el ID que necesites
+    const clienteId = 2; // O el ID que necesites
 
     this.areaProductoService.getAreasById(clienteId)
       .subscribe({

@@ -36,7 +36,7 @@ export class VistaSucursalComponent {
 
   obtenerSucursales() {
 
-    const ClienteId = 22; //El ID que necesites.
+    const ClienteId = 2; //El ID que necesites.
 
     this.sucursalService.getSucursalesByID(ClienteId)
       .subscribe({

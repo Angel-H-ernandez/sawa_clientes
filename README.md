@@ -16,14 +16,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # FEATURES
 
 ## oscar
-- si hay fallo de login cancelar la animacion de carga
-- color al filter
 - en caso de que la tabla no tenga datoss mostrar un mensaje diferente
 - estilizar las ventanas emergentes que haga el edi
-- estiliZAR EL HEADER
 - actualizar las columnas de las tablass
 - colear la icones del menu contextual
 - formatear datos si es necesario wn las tablas
+- poner de color blanco el input de busqueda
 
 ## edi
 - todas las vistas deben de funcionar con el id de local storage
