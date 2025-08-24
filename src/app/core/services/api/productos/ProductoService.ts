@@ -13,7 +13,7 @@ export class ProductoService {
 
   constructor(private http: HttpClient) {}
 
-  // 1. Parámetro en la ruta (Path Parameter)
+  // 1. Parámetro en la ruta (Path Parameter).
   getProductosById(id: number | string): Observable<ProductoResponse[]> {
     return this.http.get<ProductoResponse[]>(
       `${this.apiUrl}${ENDPOINTS.PRODUCTOS.GET_BY_ID(id)}`
@@ -25,5 +25,34 @@ export class ProductoService {
       })
     );
   }
+
+  // 2. Crear nuevo producto (POST).
+  createProductos(cliente: ProductoResponse): Observable<ProductoResponse> {
+    return this.http.post<ProductoResponse>(
+      `${this.apiUrl}${ENDPOINTS.PRODUCTOS.CREATE}`,
+      cliente
+    ).pipe(
+      tap(response => console.log('Producto creado:', response)),
+      catchError(error => {
+        console.error('Error al crear el producto:', error);
+        throw error;
+      })
+    );
+  }
+
+  // Eliminar un producto  (delete).
+  deleteProducto(id: number | string) {
+    return this.http.delete(
+      `${this.apiUrl}${ENDPOINTS.PRODUCTOS.DELETE(id)}`,
+    ).pipe(
+      tap(response => console.log('Respuesta del servidor:', response)),
+      catchError(error => {
+        console.log("Error al crear el cliente: ", error);
+        throw error
+      })
+
+    )
+  }
+
 }
 //
